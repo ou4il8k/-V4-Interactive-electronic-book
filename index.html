@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100b20">
+  <title>دليل HTML و CSS | كتاب تفاعلي</title>
+  <link rel="icon" type="img.png" href="Neon Purple Arabic Web Design Guide.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="الصفحة الرئيسية">
+      <span class="brand-mark">✎</span>
+      <span><b>WEB<span>BOOK</span></b><small>دليل تصميم صفحات الويب</small></span>
+    </a>
+    <div class="top-actions">
+      <button class="icon-button" id="contentsBtn" title="فهرس الكتاب" aria-label="فهرس الكتاب">☷</button>
+      <button class="icon-button" id="helpBtn" title="اختصارات لوحة المفاتيح" aria-label="مساعدة">؟</button>
+      <button class="sound-button" id="themeBtn" title="تبديل المظهر"><span>◐</span><span class="theme-label">المظهر</span></button>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <section class="intro-row">
+      <div>
+        <div class="eyebrow"><span class="live-dot"></span> إصدار تعليمي تفاعلي · 2026</div>
+       <h1 class="glow-title">
+    رحلتك إلى عالم
+    <span>HTML و CSS</span>
+</h1>
+        <p>كتاب بصري مبسّط يشرح بناء صفحات الويب، من أول وسم إلى تنسيق واجهة متكاملة.</p>
+      </div>
+      <div class="course-chip"><span class="chip-icon">✦</span><span><b>مستوى مبتدئ إلى متوسط</b><small>شرح + أمثلة + تطبيقات</small></span></div>
+    </section>
+
+    <section class="reader" aria-label="قارئ الكتاب">
+      <div class="reader-toolbar">
+        <div class="reader-title"><span class="book-mini">▤</span><span>دليل HTML و CSS</span><span class="toolbar-divider"></span><span class="muted" id="chapterLabel">مقدمة</span></div>
+        <div class="reader-tools">
+          <button class="tool-btn" id="thumbBtn" title="عرض مصغرات الصفحات">▦</button>
+          <button class="tool-btn" id="fullscreenBtn" title="ملء الشاشة">⛶</button>
+        </div>
+      </div>
+
+      <div class="book-stage" id="bookStage">
+        <button class="edge-nav edge-prev" id="prevBtn" aria-label="الصفحات السابقة">‹</button>
+        <div class="book-shadow"></div>
+        <div class="book" id="book">
+          <div class="book-spine"></div>
+          <article class="paper right-page" id="rightPage"></article>
+          <article class="paper left-page" id="leftPage"></article>
+          <div class="flip-overlay" id="flipOverlay"></div>
+        </div>
+        <button class="edge-nav edge-next" id="nextBtn" aria-label="الصفحات التالية">›</button>
+      </div>
+
+      <div class="reader-bottom">
+        <div class="page-count"><span id="currentPage">01</span><i>/</i><span id="totalPages">14</span></div>
+        <div class="progress-wrap"><div class="progress-track"><span id="progressBar"></span></div><small id="progressText">7% مكتمل</small></div>
+        <div class="bottom-controls">
+          <button class="nav-btn secondary" id="bottomPrev">السابق</button>
+          <button class="nav-btn primary" id="bottomNext">الصفحة التالية <span>←</span></button>
+        </div>
+      </div>
+      <div class="keyboard-hint">استخدم الأسهم ← → للتنقل · اضغط على أطراف الكتاب لقلب الصفحات</div>
+    </section>
+
+    <section class="below-grid">
+      <div class="feature-card"><span class="feature-icon purple">⌘</span><div><b>أمثلة عملية</b><small>أكواد قصيرة توضّح الفكرة خطوة بخطوة.</small></div></div>
+      <div class="feature-card"><span class="feature-icon blue">▧</span><div><b>رسومات توضيحية</b><small>مخططات مرئية لفهم بنية الصفحة.</small></div></div>
+      <div class="feature-card"><span class="feature-icon pink">✧</span><div><b>تجربة تفاعلية</b><small>تنقّل بين الصفحات وتصفّح الفهرس.</small></div></div>
+    </section>
+    <footer>صُمّم للتعلّم والعرض الأكاديمي <span>✦</span> HTML يصف المحتوى، وCSS يمنحه الحياة.</footer>
+  </main>
+
+  <div class="modal-backdrop" id="modalBackdrop">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head"><div><small>استكشف محتويات الكتاب</small><h2 id="modalTitle">فهرس الفصول</h2></div><button class="close-modal" id="closeModal" aria-label="إغلاق">×</button></div>
+      <div class="toc-list" id="tocList"></div>
+    </section>
+  </div> 
+<div class="developer-credit">
+  <span class="credit-line"></span>
+  <p>
+    صُنع بكل <span class="heart">♥</span> وقليل من البنفسجي
+    <span class="credit-separator">|</span>
+    تم تطوير هذا الموقع بواسطة
+    <strong>Ouail</strong>
+  </p>
+  <span class="credit-line"></span>
+</div>
+
+
+  <div class="toast" id="toast">تم النسخ بنجاح</div>
+  <script src="script.js"></script>
+</body>
+</html>
